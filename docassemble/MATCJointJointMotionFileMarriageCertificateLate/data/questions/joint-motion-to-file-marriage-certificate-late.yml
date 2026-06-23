@@ -179,11 +179,11 @@ id: Reason for Delay
 question: |
   Reason for Delay
 subquestion: |
-  Please explain why there is a delay in giving proof of your marriage.
+  Briefly explain why you did or could not upload a certified copy of your marriage certificate to include with your joint petition for divorce.
 fields:
-  - "Reason for marriage proof delay": marriage_proof_delay_reason
+  - "Reason for marriage certificate delay": marriage_proof_delay_reason
     input type: area
-  - "Plan to fix marriage proof delay": marriage_proof_delay_action_plan
+  - "Plan to obtain and submit certified copy of marriage certificate": marriage_proof_delay_action_plan
     input type: area
 ---
 id: Attorney Information
