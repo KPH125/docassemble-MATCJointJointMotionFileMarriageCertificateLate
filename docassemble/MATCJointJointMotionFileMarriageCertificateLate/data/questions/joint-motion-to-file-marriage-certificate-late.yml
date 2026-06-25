@@ -95,6 +95,7 @@ code: |
   allowed_courts = ['Probate and Family Court']
   user_role = "plaintiff"
   user_ask_role = "plaintiff"
+   
   users.gather()
   set_parts(subtitle=str(users))
   marriage_city
@@ -152,6 +153,36 @@ subquestion: |
   If you are a couple filing a joint petition for divorce you can use this interview to file a joint motion to file marriage certificate late if not submitting certified copy of marriage certificate with petition.
 
   Most people take about 10 minutes to complete this interview.
+---
+sets: 
+  - users[i].name.first
+  - users[i].name.last
+  - users[i].name.middle
+  - users[i].name.suffix  
+id: Petitioner name fields
+question: |
+  % if i == 0:
+  Petitioner A
+  % elif i == 1:
+  Petitioner B
+  % else:
+  Petitioner Name
+  % endif
+subquestion: |
+  % if i == 1:
+  Who is ${ users[0] }'s spouse?
+  % else:
+  What is your name?
+  % endif
+fields:
+  - code: |
+      users[i].name_fields()
+---
+id: users_limit
+depends on:
+  - users
+code: |
+  users.there_is_another = (len(users) < 2)
 ---
 id: Marriage Details
 question: |
