@@ -46,7 +46,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.MATCJointJointMotionFileMarriageCertificateLate',
       version='0.0.1',
       description=('A docassemble extension to create a joint motion to file marriage certificate late with 1A joint petition for divorce'),
-      long_description='Part of the [MATC 1A Joint Divorce project](https://github.com/orgs/SuffolkLITLab/projects/84)',
+      long_description='Part of the [MATC 1A Joint Divorce project](https://github.com/orgs/SuffolkLITLab/projects/84)\r\n\r\n\r\nTo integrate with Joint petition (initial filings) such that if the user fails to upload a certified copy of marriage certificate, they complete this interview and include the motion in their filings in place of same. \r\n',
       long_description_content_type='text/markdown',
       author='KP Hunsinger',
       author_email='wkh06781@su.suffolk.edu',
